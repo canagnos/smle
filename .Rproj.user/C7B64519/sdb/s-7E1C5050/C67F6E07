@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: SMLE\nType: Package\nTitle: What the package does (short line)\nVersion: 1.0\nDate: 2015-09-04\nAuthor: Who wrote it\nMaintainer: Who to complain to <yourfault@somewhere.net>\nDescription: More about what it does (maybe more than one line)\nLicense: What license is it under?\nSuggests: testthat\n",
+    "created" : 1501364989322.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3584668081",
+    "id" : "C67F6E07",
+    "lastKnownWriteTime" : 1501366356,
+    "last_content_update" : 1501366356875,
+    "path" : "~/libraries/smle/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

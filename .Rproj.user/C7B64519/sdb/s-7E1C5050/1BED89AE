@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "context(\"Streaming multivariate Gaussian tests\")\n\nn = 1000\noutGen <- genAbrupt(n=n, muW=n/2, p=2, seed=2)\nparams <- list()\netas = rep(NA, n)\nfor (i in 1:n){\n  params <- streamGaussian(outGen$X[i,], params, alpha=0.001) \n  etas[i] <- params$eta\n}\n\netas_after_change = etas[(n/2+1):(n/2+10)]\netas_before_change = etas[(n/2-10):(n/2)]\nmean(etas_after_change)\n\ntest_that(\"Learning rate increases immediately after change\", {\n  expect_gt(mean(diff(etas_after_change)), 0)\n  expect_gt(mean(etas_after_change), mean(etas_before_change))\n})\n\n\ntest_that(\"Learning rate stabilises immediately after change\", {\n  expect_gt(var(etas_after_change), var(etas_before_change))\n})\n",
+    "created" : 1501365096102.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1983898543",
+    "id" : "1BED89AE",
+    "lastKnownWriteTime" : 1501366585,
+    "last_content_update" : 1501366585743,
+    "path" : "~/libraries/smle/tests/testthat/test_gaussian.R",
+    "project_path" : "tests/testthat/test_gaussian.R",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
